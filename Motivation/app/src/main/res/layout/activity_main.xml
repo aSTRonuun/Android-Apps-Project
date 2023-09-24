@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/purple"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        >
+        <ImageView
+            android:id="@+id/image_all_inclusive"
+            android:src="@drawable/baseline_all_inclusive_24"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/image_emoji"
+            android:src="@drawable/baseline_emoji_emotions_24"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/image_sunny"
+            android:src="@drawable/baseline_light_mode_24"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_menu"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/cabin"
+        android:paddingTop="12dp"
+        android:text="Olá, Vitor"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/text_motivation_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/cabin"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Motivation"
+        android:textColor="@color/black"
+        android:textSize="22sp"/>
+
+    <View
+        android:layout_width="128dp"
+        android:layout_height="3dp"
+        android:elevation="5dp"
+        android:layout_below="@id/text_motivation_phrase"
+        android:layout_centerInParent="true"
+        android:background="@color/dark_purple"/>
+
+    <Button
+        android:id="@+id/button_new_phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/dark_purple"
+        android:fontFamily="@font/cabin"
+        android:text="@string/new_phrase"
+        android:textAllCaps="true" />
+
+</RelativeLayout>
